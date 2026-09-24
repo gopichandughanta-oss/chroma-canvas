@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Color Picker — Chroma</title>
+  <meta name="description" content="Pick any color with a hue and saturation picker. Get HEX, RGB, and HSL values and copy them in one click." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/home.html" class="brand"><span class="brand-mark"></span> Chroma</a>
+      <nav class="nav-links">
+        <a href="/home.html">Home</a>
+        <a href="/picker.html" class="active">Picker</a>
+        <a href="/palettes.html">Palettes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1>Color Picker</h1>
+      <p>Drag on the canvas to choose saturation and value. Slide the hue bar to rotate color. Tap any value to copy.</p>
+    </div>
+
+    <div class="picker-grid">
+      <div class="picker-stage">
+        <div class="sv-wrap" id="sv">
+          <div class="sv-bg" id="svBg"></div>
+          <div class="sv-cursor" id="svCursor"></div>
+        </div>
+        <div class="hue-wrap" id="hue">
+          <div class="hue-cursor" id="hueCursor"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="value-panel">
+          <div class="preview" id="preview">#ff5d3b</div>
+          <div class="value-list">
+            <div class="value-row">
+              <span class="label">HEX</span>
+              <span class="val" id="hexVal">#ff5d3b</span>
+              <button class="copy-btn" data-copy="hex">Copy</button>
+            </div>
+            <div class="value-row">
+              <span class="label">RGB</span>
+              <span class="val" id="rgbVal">rgb(255, 93, 59)</span>
+              <button class="copy-btn" data-copy="rgb">Copy</button>
+            </div>
+            <div class="value-row">
+              <span class="label">HSL</span>
+              <span class="val" id="hslVal">hsl(11, 100%, 62%)</span>
+              <button class="copy-btn" data-copy="hsl">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="harmony">
+          <h3>Harmonies</h3>
+          <div class="harmony-group">
+            <div class="harmony-label">Complementary</div>
+            <div class="harmony-swatches" id="harmonyComp"></div>
+          </div>
+          <div class="harmony-group">
+            <div class="harmony-label">Analogous</div>
+            <div class="harmony-swatches" id="harmonyAna"></div>
+          </div>
+          <div class="harmony-group">
+            <div class="harmony-label">Triadic</div>
+            <div class="harmony-swatches" id="harmonyTri"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    Built with plain HTML, CSS & JavaScript · Chroma
+  </footer>
+
+  <div class="toast" id="toast">Copied!</div>
+  <script src="/js/picker.js"></script>
+</body>
+</html>

@@ -1,24 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+// The color picker app is built as plain HTML/CSS/JS under /public.
+// "/" redirects into the static home page so the live preview opens the app.
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useEffect(() => {
+    window.location.replace("/home.html");
+  }, []);
   return (
     <div
       className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
+      style={{ backgroundColor: "#f6f5f1" }}
     >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+      <p style={{ fontFamily: "system-ui, sans-serif", color: "#6c6c78" }}>
+        Loading Chroma…
+      </p>
     </div>
   );
 }

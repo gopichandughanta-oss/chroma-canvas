@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chroma — A modern color toolkit</title>
+  <meta name="description" content="Chroma is a clean color picker and palette studio for designers and developers. Pick colors, copy values, and build harmonious palettes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/home.html" class="brand"><span class="brand-mark"></span> Chroma</a>
+      <nav class="nav-links">
+        <a href="/home.html" class="active">Home</a>
+        <a href="/picker.html">Picker</a>
+        <a href="/palettes.html">Palettes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">● A color toolkit</span>
+      <h1>Pick colors.<br />Build palettes.<br />Copy in one tap.</h1>
+      <p class="lead">Chroma is a small, fast color studio for the web. Dial in the exact shade you want, read it as HEX, RGB, or HSL, and generate harmonious palettes in seconds.</p>
+      <div class="hero-actions">
+        <a class="btn btn-accent" href="/picker.html">Open the picker →</a>
+        <a class="btn" href="/palettes.html">Generate a palette</a>
+      </div>
+      <div class="ribbon" id="ribbon"></div>
+    </section>
+
+    <section class="cards">
+      <a class="card" href="/picker.html">
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff5d3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c-3 4-7 7-7 11a7 7 0 0 0 14 0c0-4-4-7-7-11z"/></svg>
+        </div>
+        <h3>Color Picker</h3>
+        <p>A full saturation-and-hue picker with live HEX, RGB, and HSL readouts plus complementary, analogous, and triadic harmonies.</p>
+        <span class="arrow">Open picker →</span>
+      </a>
+      <a class="card" href="/palettes.html">
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b9dff" stroke-width="2"><circle cx="9" cy="9" r="5"/><circle cx="15" cy="15" r="5"/></svg>
+        </div>
+        <h3>Palette Generator</h3>
+        <p>Generate five-color palettes, lock the ones you love, and save them to your library. Press space for a fresh set.</p>
+        <span class="arrow">Make palettes →</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    Built with plain HTML, CSS & JavaScript · Chroma
+  </footer>
+
+  <script src="/js/home.js"></script>
+</body>
+</html>

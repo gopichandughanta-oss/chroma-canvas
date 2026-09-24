@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Palette Generator — Chroma</title>
+  <meta name="description" content="Generate beautiful five-color palettes. Lock colors, press space to regenerate, and save your favorites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/home.html" class="brand"><span class="brand-mark"></span> Chroma</a>
+      <nav class="nav-links">
+        <a href="/home.html">Home</a>
+        <a href="/picker.html">Picker</a>
+        <a href="/palettes.html" class="active">Palettes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1>Palette Generator</h1>
+      <p>Five colors at a time. Lock the ones you like, then press <kbd style="font-family:ui-monospace,monospace;background:#fff;border:1px solid var(--border);border-bottom-width:2px;border-radius:6px;padding:2px 7px;font-size:13px;">Space</kbd> to remix the rest.</p>
+    </div>
+
+    <div class="palette-bar">
+      <div class="hint">Tip: click a color to copy its HEX · <kbd>Space</kbd> to regenerate</div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn" id="saveBtn">Save palette</button>
+        <button class="btn btn-accent" id="genBtn">New palette</button>
+      </div>
+    </div>
+
+    <div class="palette-strip" id="strip"></div>
+
+    <section class="saved-section">
+      <h2>Saved palettes</h2>
+      <div id="savedArea"></div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    Built with plain HTML, CSS & JavaScript · Chroma
+  </footer>
+
+  <div class="toast" id="toast">Copied!</div>
+  <script src="/js/palettes.js"></script>
+</body>
+</html>
